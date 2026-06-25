@@ -38,18 +38,20 @@ It is designed as a learning project for:
 
 ## Project structure
 
-
+'''
 app/
 schemas/        # Pydantic models
 services/       # Validation logic
 main.py         # FastAPI entry point
 tests/          # Unit tests
 examples/       # Sample JSON payloads
+'''
 
 ---
 
 ## Installation
 
+'''bash
 git clone https://github.com/your-username/fhir-patient-validator.git
 cd fhir-patient-validator
 
