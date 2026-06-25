@@ -93,8 +93,10 @@ Example payload:
   "birthDate": "1990-01-01"
 }
 ```
-```JSON
 Response
+
+```JSON
+
 {
   "valid": true,
   "errors": [],
