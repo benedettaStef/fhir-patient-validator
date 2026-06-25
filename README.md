@@ -38,20 +38,20 @@ It is designed as a learning project for:
 
 ## Project structure
 
-'''
+```
 app/
 schemas/        # Pydantic models
 services/       # Validation logic
 main.py         # FastAPI entry point
 tests/          # Unit tests
 examples/       # Sample JSON payloads
-'''
+```
 
 ---
 
 ## Installation
 
-'''bash
+```bash
 git clone https://github.com/your-username/fhir-patient-validator.git
 cd fhir-patient-validator
 
@@ -59,16 +59,17 @@ python -m venv venv
 venv\Scripts\activate   # Windows
 
 pip install -r requirements.txt
-
+```
 ---
 
 ## Run the project
+```bash
 uvicorn app.main:app --reload
-
+```
 Then open:
-
+```bash
 http://127.0.0.1:8000/docs
-
+```
 ---
 
 ## API usage
@@ -78,7 +79,7 @@ Validate patient
 POST /validate
 
 Example payload:
-
+```JSON
 {
   "resourceType": "Patient",
   "id": "123",
@@ -91,29 +92,33 @@ Example payload:
   "gender": "male",
   "birthDate": "1990-01-01"
 }
-
+```
+```JSON
 Response
 {
   "valid": true,
   "errors": [],
   "warnings": []
 }
-
+```
 --- 
 
 ## Tests
 
-Run tests with: pytest
-
+Run tests with: 
+```bash
+pytest
+```
 ---
 
 ## Future improvements
-
+```
 full FHIR validation (HL7 standard compliance)
 more detailed error reporting
 support for multiple resource types
 authentication layer
 database integration
-
+```
+---
 ## Author
 Benedetta Stef
